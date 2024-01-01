@@ -1,0 +1,118 @@
+#animationRoot {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  z-index: 1;
+  background-color: #efebe6;
+  overflow: hidden;
+}
+
+#cultureGradient {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(263.63deg, #efebe6 9.94%, #154571 96.89%);
+  z-index: 0;
+}
+
+#topSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#bottomSvg {
+  position: absolute;
+  top: -70px;
+  left: 0;
+  z-index: 1;
+}
+
+#svgPath {
+  z-index: 2;
+  position: absolute;
+  top: -35px;
+  left: 0;
+}
+
+@media screen and (max-width: 1920px) {
+  #animationRoot {
+    height: 210px;
+  }
+
+  #bottomSvg {
+    top: -50px;
+  }
+
+  #svgPath {
+    top: -25px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  #animationRoot {
+    height: 175px;
+  }
+  #bottomSvg {
+    top: -30px;
+  }
+
+  #svgPath {
+    top: -15px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  #animationRoot {
+    height: 125px;
+  }
+  #bottomSvg {
+    top: -20px;
+  }
+
+  #svgPath {
+    top: -10px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #animationRoot {
+    height: 100px;
+  }
+  #bottomSvg {
+    top: -15px;
+  }
+
+  #svgPath {
+    top: -7.5px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #animationRoot {
+    height: 70px;
+  }
+  #bottomSvg {
+    top: -10px;
+  }
+
+  #svgPath {
+    top: -5px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  #animationRoot {
+    height: 55px;
+  }
+  #bottomSvg {
+    top: -7.5px;
+  }
+
+  #svgPath {
+    top: -3.75px;
+  }
+}
