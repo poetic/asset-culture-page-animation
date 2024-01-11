@@ -3,26 +3,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const animationRoot = document.getElementById('animationRoot');
 
   // create svg and path for circle to follow
-  const svgForPath = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-  svgForPath.setAttribute('id', 'svgPath');
-  svgForPath.setAttribute('viewBox', '0 -3 50 10');
-  svgForPath.style.overflow = 'hidden';
+  // const svgForPath = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  // svgForPath.setAttribute('id', 'svgPath');
+  // svgForPath.setAttribute('viewBox', '0 -3 50 10');
+  // svgForPath.style.overflow = 'hidden';
 
-  const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
-  svgPath.setAttribute('d', 'm54 1c-18-5-36 5-54 0');
-  svgPath.setAttribute('fill', 'transparent');
+  // const svgPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+  // svgPath.setAttribute('d', 'm54 1c-18-5-36 5-54 0');
+  // svgPath.setAttribute('fill', 'transparent');
 
   // create and append append circle to svg element
-  const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
-  circle.setAttribute('r', '0.75px');
-  circle.setAttribute('fill', '#154571');
-  circle.style.zIndex = 100;
-  circle.style.position = 'absolute';
-  circle.style.top = '0px';
-  circle.style.left = '0px';
-  svgForPath.appendChild(circle);
+  // const circle = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+  // circle.setAttribute('r', '0.75px');
+  // circle.setAttribute('fill', '#154571');
+  // circle.style.zIndex = 100;
+  // circle.style.position = 'absolute';
+  // circle.style.top = '0px';
+  // circle.style.left = '0px';
+  // svgForPath.appendChild(circle);
 
-  animationRoot.appendChild(svgForPath);
+  // animationRoot.appendChild(svgForPath);
 
   // create top svg, path, append path to svg and then svg to root
   const topSvg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
@@ -70,12 +70,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const animationRootHeight = animationRootRect.height;
 
     // animate circle along svgPath
-    const pathLength = svgPath.getTotalLength();
+    // const pathLength = svgPath.getTotalLength();
     const percentage =
       1 - Math.max(Math.min(percentageScale(animationRootTop, animationRootHeight), 0.915), 0.01);
-    const point = svgPath.getPointAtLength(pathLength * percentage);
-    circle.setAttribute('cx', point.x);
-    circle.setAttribute('cy', point.y);
+    // const point = svgPath.getPointAtLength(pathLength * percentage);
+    // circle.setAttribute('cx', point.x);
+    // circle.setAttribute('cy', point.y);
 
     cultureGradient.style.transform = `translateX(${
       percentageScale(animationRootTop, animationRootHeight) * 100 - 100
